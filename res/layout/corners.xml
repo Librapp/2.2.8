@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/background_corner_left_top" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:contentDescription="@string/app_name"
+        android:layout_gravity="right|top"
+        android:background="@drawable/background_corner_right_top" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+         android:contentDescription="@string/app_name"
+        android:background="@drawable/background_corner_left_bottom" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+         android:contentDescription="@string/app_name"
+        android:background="@drawable/background_corner_right_bottom" />
+
+</FrameLayout>

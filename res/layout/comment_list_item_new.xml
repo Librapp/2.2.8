@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/headpic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/pd_comment_head" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/headpic"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/app_name"
+                android:textColor="#383838" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/app_name"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:textColor="#7c7c7c" />
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:contentDescription="@string/app_name"
+            android:minHeight="53dp"
+            android:minWidth="80dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/comment_audio_btn"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_margin="5dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/comment_item_content_audio_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/pc_switch2audio_big_normal"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/comment_item_progressBar"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/root_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/root_talk_bg"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/root_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#7c7c7c" />
+
+            <ImageView
+                android:id="@+id/root_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/root_content"
+                android:contentDescription="@string/app_name"
+                android:minHeight="53dp"
+                android:minWidth="80dp"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/comment_audio_btn_root"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/root_pic"
+                android:layout_gravity="left|center_vertical"
+                android:layout_margin="5dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/comment_item_content_audio_pic_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pc_switch2audio_big_normal"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/comment_item_progressBar_root"
+                    style="@android:style/Widget.ProgressBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comment_from"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/comment_left"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/zhuanfa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/replay"
+                android:drawableLeft="@drawable/zhuanfa"
+                android:drawablePadding="3dp"
+                android:gravity="center_vertical"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

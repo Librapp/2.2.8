@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/navigator_bg" >
+
+        <TextView
+            android:id="@+id/activitys_title"
+            style="@style/navigator_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/navigator_activities" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tag_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigator_layout"
+        android:background="@drawable/rcmd_tag_layout_bg"
+        android:baselineAligned="false"
+        android:padding="4dp" >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/all_tag"
+                style="@style/activities_tag_text_style"
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@drawable/recommand_tag_bg"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/activities_all_tag"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/my_tag"
+                style="@style/activities_tag_text_style"
+                android:layout_width="fill_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/activities_my_tag" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tag_layout" />
+    
+     <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/corner_top" />
+
+</RelativeLayout>

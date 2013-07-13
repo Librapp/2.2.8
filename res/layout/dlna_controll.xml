@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/live_player_all_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 底部工具栏 -->
+
+    <LinearLayout
+        android:id="@+id/mpl_play_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/player_bottom_bg"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="10dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/currentTimeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/cp_play_tool_progress"
+                android:textColor="@color/white" />
+
+            <SeekBar
+                android:id="@+id/tool_progress"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1.0"
+                android:maxHeight="8dp"
+                android:minHeight="8dp"
+                android:paddingLeft="13dip"
+                android:paddingRight="13dip"
+                android:progressDrawable="@drawable/fp_seekbar"
+                android:thumb="@drawable/fp_progressthumb" />
+
+            <TextView
+                android:id="@+id/totalTimeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/cp_play_tool_progress"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <!-- 进度声音工具栏 -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical" >
+
+                <ImageButton
+                    android:id="@+id/tool_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/cp_play_tool_back_bg" />
+
+                <ImageButton
+                    android:id="@+id/tool_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/cp_play_tool_play_bg" />
+
+                <ImageButton
+                    android:id="@+id/tool_advance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/cp_play_tool_advance_bg" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/tool_vol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/player_sound_max" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/dlna_tv_img" />
+
+        <TextView
+            android:id="@+id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="3dip"
+            android:textColor="#777777"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tv_back"
+            android:layout_width="316dip"
+            android:layout_height="45dip"
+            android:background="@drawable/dlna_cancel_txt_btn"
+            android:contentDescription="@string/app_name"
+            android:text="@string/dlna_exit_tv"
+            android:textColor="#6e6e6e" />
+    </LinearLayout>
+
+    <com.sumavision.talktv2.activity.VerticalSeekBar
+        android:id="@+id/vol"
+        android:layout_width="wrap_content"
+        android:layout_height="180dip"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="30dp"
+        android:maxWidth="27dip"
+        android:minWidth="27dip"
+        android:progressDrawable="@drawable/fp_seekbar"
+        android:thumb="@null"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/videoplay_tips_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_name"
+        android:src="#00000000" />
+
+    <!-- 视频顶部标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/np_l_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="top"
+        android:background="@drawable/player_title_bg"
+        android:clickable="true" >
+
+        <!-- 返回按钮 -->
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/new_back"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="5dp"
+            android:text="@string/player_back"
+            android:textColor="@color/player_title_color" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/player_title_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</FrameLayout>

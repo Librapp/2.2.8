@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/navigator_bg" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back_btn" />
+
+        <Button
+            android:id="@+id/manage"
+            style="@style/navigator_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/navigator_channel_edit" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/navigator_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/navigator_my_channel" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/errLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/navigator_layout"
+        android:clickable="true" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/base_large_progressbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/err_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/err_tip"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.sumavision.talktv2.activity.MyListView
+        android:id="@+id/listView"
+        style="@style/channel_listview_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigator_layout" />
+
+    <RelativeLayout
+        android:id="@+id/netlive_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/netplay_bg"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/np_netlive_bg" >
+
+            <ListView
+                android:id="@+id/nettvListView"
+                style="@style/listViewStyle"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="30dip"
+                android:scrollbars="none" />
+
+            <ImageButton
+                android:id="@+id/cancelnetTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/pd_nettv_cancel" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/commucation_dialog" />
+
+</RelativeLayout>

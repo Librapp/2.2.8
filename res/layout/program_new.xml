@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <com.sumavision.talktv2.activity.ProgramDetailLayout
+        android:id="@+id/program_id"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#d6d6d6" >
+        <!-- 焦点图 -->
+        <RelativeLayout
+            android:id="@+id/imagelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="fill_parent"
+                android:layout_height="253dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/program_new_headpic" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/outer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="120dp" >
+            <LinearLayout
+                android:id="@+id/live_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp" >
+                <ImageButton
+                    android:id="@+id/sign_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/app_name" />
+                <ImageButton
+                    android:id="@+id/fellow_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/app_name" />
+                <ImageButton
+                    android:id="@+id/activity_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/app_name" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+                <ImageButton
+                    android:id="@+id/live_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sign_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/live_layout"
+                android:background="@drawable/pd_sign_layout_bg"
+                android:padding="2dp" >
+                <GridView
+                    android:id="@+id/signusergallery"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.0"
+                    android:fadingEdgeLength="5dp"
+                    android:listSelector="@drawable/listview_selector"
+                    android:numColumns="7"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:spacing="2dp" />
+                <TextView
+                    android:id="@+id/signuser_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:textColor="#444444" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/sign_layout"
+                android:background="@drawable/pd_tag_bg"
+                android:gravity="center_vertical" >
+                <ImageView
+                    android:id="@+id/tab_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/pd_indicator" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/viewpager_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/sign_layout" >
+                <TextView
+                    android:id="@+id/comment_btn"
+                    style="@style/pd_tag_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="@string/pd_comment" />
+                <TextView
+                    android:id="@+id/video_btn"
+                    style="@style/pd_tag_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="@string/pd_video" />
+                <TextView
+                    android:id="@+id/detail_btn"
+                    style="@style/pd_tag_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:text="@string/pd_detail" />
+            </LinearLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/viewpager_btn"
+                android:background="#d6d6d6" />
+        </RelativeLayout>
+    </com.sumavision.talktv2.activity.ProgramDetailLayout>
+    <RelativeLayout
+        android:id="@+id/navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/pd_navigator"
+        android:clickable="true" >
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn" />
+        <ProgressBar
+            android:id="@+id/header_progressBar"
+            style="@style/base_small_progressbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp" />
+        <Button
+            android:id="@+id/refresh"
+            style="@style/navigator_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/navigator_refresh"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/program_title"
+            style="@style/navigator_text_style"
+            android:layout_width="160dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/program_no_info" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/errLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/navigator_layout"
+        android:background="#d6d6d6"
+        android:clickable="true" >
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/base_small_progressbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:id="@+id/err_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/err_tip"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/netlive_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/netplay_bg"
+        android:clickable="true"
+        android:visibility="gone" >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/np_netlive_bg" >
+            <ListView
+                android:id="@+id/nettvListView"
+                style="@style/listViewStyle"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="30dip"
+                android:scrollbars="none" />
+            <ImageButton
+                android:id="@+id/cancelnetTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/pd_nettv_cancel" />
+        </FrameLayout>
+    </RelativeLayout>
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/commucation_dialog" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/corners" />
+</RelativeLayout>

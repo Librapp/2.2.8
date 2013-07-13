@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="77dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip" >
+
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="70dip"
+        android:background="@drawable/channel_list_item_bg" >
+
+        <RelativeLayout
+            android:id="@+id/tvframe"
+            android:layout_width="78dip"
+            android:layout_height="65dip"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/pic"
+                android:layout_width="78dip"
+                android:layout_height="57dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/channel_tv_logo_bg"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="5dip"
+                android:gravity="center_horizontal"
+                 android:layout_centerHorizontal="true"
+                android:textColor="#7f7b7b"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/channel_program_name_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:layout_toRightOf="@id/tvframe"
+            android:layout_toLeftOf="@+id/liveBtn"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginTop="3dip"
+            android:layout_toRightOf="@id/tvframe"
+            android:textColor="#7c7c7c"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/liveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="10dip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="70dip"
+        android:background="@drawable/channel_list_item_edit_bg"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/channel_edit_delete"
+            android:textColor="@color/channel_delete"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:paddingRight="10dip" />
+    </RelativeLayout>
+
+</RelativeLayout>

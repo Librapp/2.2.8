@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sumavision.talktv2"
+    android:versionCode="40"
+    android:versionName="2.2.7" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+
+    <supports-screens android:normalScreens="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".activity.TalkTvApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/ApplicationStyle" >
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="4fcee97a5270152e2c000073" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="youthapp" >
+        </meta-data>
+
+        <activity
+            android:name=".activity.MyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyFellowingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyFansActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyBookActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyBadgeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyPrivateMsgActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyZhuijuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyChannelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyReplyActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.MyAtActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.RecommandAppActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.ShowImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.PlayHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.OtherUserCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme" />
+        <activity
+            android:name=".activity.SplashNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.StarDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.SpecicalActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.ProgramNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.SendCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.ActivitiesDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.TVScreenShotActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <!-- 帮助 -->
+        <activity
+            android:name=".activity.HelpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" />
+        <activity
+            android:name=".activity.OtherUserZhuijuActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" />
+        <activity
+            android:name=".activity.OtherUserBookActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" />
+        <activity
+            android:name=".activity.OtherUserCommentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" />
+        <!-- 关于 -->
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme" />
+        <!-- 登陆 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="LoginActivity"
+                    android:scheme="login" />
+            </intent-filter>
+        </activity>
+        <!-- 注册 -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" >
+        </activity>
+        <!-- 绑定登录 -->
+        <activity
+            android:name=".activity.BindAccountActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" >
+        </activity>
+        <!-- 网页界面 -->
+        <activity
+            android:name=".activity.WebBrowserActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@style/ActivityAllTranslucentNew"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" >
+        </activity>
+        <!-- 我的编辑 -->
+        <activity
+            android:name=".activity.UserInfoEditActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" >
+        </activity>
+        <!-- 节目周边信息页 -->
+        <activity
+            android:name=".activity.ProgramAroundActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" >
+        </activity>
+        <activity
+            android:name=".activity.CommentDetailNewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" />
+        <!-- 用户私信页 -->
+        <activity
+            android:name=".activity.UserMailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.UserFeedbackActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustPan|stateUnspecified" >
+        </activity>
+        <activity
+            android:name=".activity.NewLivePlayerActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="tvfanplayurlhttp" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="tvfanplayurl" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="tvfan" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="tvfanvideoweixin" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.NotificationService"
+            android:label="@string/app_name" />
+        <service
+            android:name=".services.LocateMySelfService"
+            android:label="@string/app_name" />
+        <service
+            android:name=".services.AppUpdateService"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|navigation|keyboard|keyboardHidden|screenLayout|fontScale"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <service
+            android:name="io.vov.vitamio.VitamioService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="io.vov.vitamio.IVitamioService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.tencent.weibo.webview.OAuthV1AuthorizeWebView"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="local.player.vi.widget.InitActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.WebPlayActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme" />
+        <!-- 分享到微信页面 -->
+        <activity
+            android:name=".activity.ShareToWeixinActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/ActivityAllTranslucentNewHasTitle" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 徽章详情 -->
+        <activity
+            android:name=".activity.BadgeDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme" />
+        <!-- 活动网页展示页面 -->
+        <activity
+            android:name=".activity.ActivityWebShowActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme" />
+        <activity
+            android:name=".activity.MainWebPlayActivity"
+            android:configChanges="orientation|screenLayout|screenSize|keyboardHidden"
+            android:label="@string/ApplicationName"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".activity.MainWebPlayBlockWaitActivity"
+            android:configChanges="orientation|screenLayout|screenSize|keyboardHidden"
+            android:label="@string/ApplicationName"
+            android:theme="@style/ActivityAllTranslucentNew" />
+        <activity
+            android:name=".activity.CustomChannelListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme" />
+        <activity
+            android:name=".activity.ChannelDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/activity_theme"
+            android:windowSoftInputMode="adjustResize|stateUnspecified" />
+        <activity
+            android:name=".activity.SlidingBaseActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/actionBarTheme" />
+        <activity
+            android:name=".dlna.NetworkActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityAllTranslucentNew" >
+        </activity>
+        <activity
+            android:name=".activity.RemoteControllerActivityNew"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityAllTranslucentNew"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <service android:name=".dlna.services.DlnaService" >
+            <intent-filter>
+                <action android:name="com.sumavision.talktv2.SEARCH_DEVICES" />
+                <action android:name="com.sumavision.talktv2.GET_ITEM_LIST" />
+                <action android:name="com.sumavision.talktv2.BIND_SERVICE" />
+                <action android:name="com.sumavision.talktv2.RESET_STACK" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".dlna.DLNAControllActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+        <activity
+            android:name=".activity.NetWorkNewActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+    </application>
+
+</manifest>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/behind_color" >
+
+    <FrameLayout
+        android:id="@+id/search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/search_layout_bg"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/menu_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/menu_search_bg"
+            android:drawableLeft="@drawable/menu_search_dleft"
+            android:drawablePadding="5dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/search_txt"
+            android:textColor="@color/menu_search_txt_color" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_layout"
+        android:layout_marginBottom="49dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/menu_title_style_in_scroll"
+                android:text="@string/menu_content" />
+
+            <TextView
+                android:id="@+id/recommend"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_home"
+                android:text="@string/menu_recommend" />
+
+            <TextView
+                android:id="@+id/tv"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_tv"
+                android:text="@string/menu_tv" />
+
+            <TextView
+                android:id="@+id/oversea"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_oversea"
+                android:text="@string/menu_oversea" />
+
+            <TextView
+                android:id="@+id/movie"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_movie"
+                android:text="@string/menu_movie" />
+
+            <TextView
+                android:id="@+id/zongyi"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_zongyi"
+                android:text="@string/menu_zongyi" />
+
+            <TextView
+                android:id="@+id/special"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_special"
+                android:text="@string/menu_special" />
+
+            <TextView
+                android:id="@+id/live"
+                style="@style/menu_title_style_in_scroll"
+                android:text="@string/menu_live" />
+
+            <TextView
+                android:id="@+id/live_all"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_live_all"
+                android:text="@string/menu_live_all" />
+
+            <TextView
+                android:id="@+id/live_ranking"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_live_ranking"
+                android:text="@string/menu_live_ranking" />
+
+            <TextView
+                style="@style/menu_title_style_in_scroll"
+                android:text="@string/menu_friend" />
+
+            <TextView
+                android:id="@+id/friend_search"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_friend_search"
+                android:text="@string/menu_friend_search" />
+
+            <TextView
+                android:id="@+id/friend_all"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_friend_all"
+                android:text="@string/menu_friend_all" />
+
+            <TextView
+                style="@style/menu_title_style_in_scroll"
+                android:text="@string/menu_activity" />
+
+            <TextView
+                android:id="@+id/medal"
+                style="@style/menu_sub_title_style_in_scroll"
+                android:drawableLeft="@drawable/menu_medal"
+                android:text="@string/menu_medal" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/menu_login_layout_bg"
+        android:paddingLeft="10dip" >
+
+        <ImageView
+            android:id="@+id/headpic"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/friend_headpic_default" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/headpic"
+            android:textColor="@color/menu_login_layout"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/menu_login_btn"
+            android:contentDescription="@string/app_name"
+            android:text="@string/menu_login_btn"
+            android:textColor="@color/menu_login_layout"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/regist"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/login"
+            android:background="@drawable/menu_regist_btn"
+            android:contentDescription="@string/app_name"
+            android:text="@string/menu_regist_btn"
+            android:textColor="@color/menu_login_layout"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:background="@drawable/menu_setting_btn"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/outer"
+        android:layout_width="fill_parent"
+        android:minHeight="86dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="80dp"
+            android:layout_height="66dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rcmd_list_item_pic_default" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rcmd_list_item_status"
+            android:maxLines="1"
+            android:textColor="#7c7c7c"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/status"
+            android:layout_toRightOf="@id/pic"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+        <!-- android:textColor="#383838" -->
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/pic"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#b01f2b"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/update"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/score"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#7c7c7c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/intro"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/update"
+            android:layout_toRightOf="@id/pic"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#7c7c7c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/viewercount"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/intro"
+            android:ellipsize="end"
+            android:gravity="right|bottom"
+            android:singleLine="true"
+            android:textColor="#7c7c7c"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/viewercount"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/name"
+            android:layout_marginTop="1dp"
+            android:drawableLeft="@drawable/rcmd_list_viercount"
+            android:drawablePadding="3dp"
+            android:gravity="left"
+            android:textColor="#7c7c7c"
+            android:textSize="13dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dp"
+        android:layout_below="@id/outer"
+        android:background="@drawable/rcmd_list_diviver"
+        android:contentDescription="@string/app_name" />
+
+</RelativeLayout>

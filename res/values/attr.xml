@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleProgressBar">
+        <attr name="max" format="integer" /> <!-- 进度条最大值 -->
+        <attr name="fill" format="boolean" /> <!-- 是否填充圆形区域 -->
+        <attr name="Paint_Width" format="integer" /> <!-- 画笔宽度，填充模式下无效，会被重置为0 -->
+        <attr name="SubPaint_Width" format="integer" /> <!-- 画笔宽度，填充模式下无效，会被重置为0 -->
+        <attr name="BottomPaint_Width" format="integer" /> <!-- 画笔宽度，填充模式下无效，会被重置为0 -->
+        <attr name="Paint_Color" format="integer" /> <!-- 画笔颜色 -->
+        <attr name="SubPaint_Color" format="integer" /> <!-- 画笔颜色 -->
+        <attr name="BottomPaint_Color" format="integer" /> <!-- 画笔颜色 -->
+        <attr name="Inside_Interval" format="integer" /> <!-- 圆形区域向里缩进的距离 -->
+        <attr name="direction" format="string" /> <!-- 进度条的方向 up 或者down -->
+        <attr name="degree" format="integer" /> <!-- 进度条的角度 -->
+    </declare-styleable>
+    <declare-styleable name="HorizontalPager">
+        <attr name="pageWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="PagerControl">
+        <attr name="barColor" format="color" />
+        <attr name="highlightColor" format="color" />
+        <attr name="fadeDelay" format="integer" />
+        <attr name="fadeDuration" format="integer" />
+        <attr name="roundRectRadius" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/network_all"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eff0f1"
+    android:orientation="vertical" >
+    <!-- 标题 -->
+    <RelativeLayout
+        android:id="@+id/network_header"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="top"
+        android:background="@drawable/navigator_bg" >
+        <!-- 后退按钮 -->
+        <ImageButton
+            android:id="@+id/network_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/top_left_back" />
+        <TextView
+            android:id="@+id/network_title"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="娱乐共享"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/network_title_hot_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/rc_to_tv_small"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/selectedDeviceList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/dialog_frame"
+        android:visibility="gone" >
+    </ListView>
+    <Button
+        android:id="@+id/dlna_searchButton"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/my_text_middle"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:text="搜索附近设备"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+    <!-- android:layout_alignParentTop="true" -->
+    <ListView
+        android:id="@+id/dlna_deviceList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/dlna_searchButton"
+        android:layout_below="@+id/network_header"
+        android:background="#99ffffff"
+        android:divider="@drawable/lr_pt_item_line"
+        android:dividerHeight="1dp" />
+    <!-- android:background="@android:drawable/dialog_frame" -->
+    <Button
+        android:id="@+id/dlna_settingButton"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/mainpage_btn_bg_"
+        android:gravity="center"
+        android:text="设置共享目录"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/dlna_net_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="gone" />
+    <ImageButton
+        android:id="@+id/shuai_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/shuai_small"
+        android:visibility="gone" />
+</RelativeLayout>

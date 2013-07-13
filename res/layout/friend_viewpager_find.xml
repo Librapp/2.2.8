@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/search_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_framae_bg"
+        android:padding="5dip" >
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/friend_search_bg"
+            android:hint="@string/friend_search_hint"
+            android:lines="1"
+            android:paddingLeft="30dp"
+            android:paddingRight="35dp"
+            android:textColorHint="@color/search_hint_color"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/search_cancle"
+            android:layout_width="26dip"
+            android:layout_height="26dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/search_delete" />
+    </RelativeLayout>
+
+    <com.sumavision.talktv2.activity.ProgramCommentListView
+        android:id="@+id/searchListView"
+        style="@style/listViewStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_frame" />
+
+    <RelativeLayout
+        android:id="@+id/recommend_list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/search_frame" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/loading_layout" />
+
+        <com.sumavision.talktv2.activity.MyListView
+            android:id="@+id/listView"
+            style="@style/listViewStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

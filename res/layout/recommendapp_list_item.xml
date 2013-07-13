@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rcmd_list_item_pic_default" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="5dp"
+        android:layout_toRightOf="@id/pic"
+        android:textColor="#383838"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:paddingLeft="5dp"
+        android:layout_toRightOf="@id/pic"
+        android:textColor="#7c7c7c"
+        android:lines="2"
+        android:ellipsize="end"
+        android:textSize="14sp" />
+    
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/rcmd_special_arrow" />
+    
+
+</RelativeLayout>

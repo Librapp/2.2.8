@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+          style="@style/base_small_progressbar_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/err_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/err_tip"
+        android:visibility="gone" />
+
+    <com.sumavision.talktv2.activity.MyScrollView
+        android:id="@+id/scollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/intro"
+                style="@style/pd_detail_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ji_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pd_video_vod_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="-15dp"
+                android:text="@string/pd_video_vod_tips"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <GridView
+                android:id="@+id/jishu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@color/list_transparent"
+                android:horizontalSpacing="1dp"
+                android:listSelector="@null"
+                android:numColumns="4"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:verticalSpacing="1dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/pd_video_tvstaion_line"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/rcmd_list_diviver"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/pd_video_tvstaion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/pd_video_channels"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/pd_video_tvlist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dp"
+                android:visibility="gone" 
+                android:paddingRight="10dp"
+                />
+        </LinearLayout>
+    </com.sumavision.talktv2.activity.MyScrollView>
+
+</RelativeLayout>

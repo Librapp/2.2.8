@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ps_edit_all"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/ps_navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/navigator_bg" >
+
+        <TextView
+            style="@style/navigator_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/navigator_search" />
+
+        <Button
+            android:id="@+id/ps_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back_btn" />
+
+        <Button
+            android:id="@+id/search"
+            style="@style/navigator_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dip"
+            android:text="@string/navigator_search_clear" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ps_search_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ps_navigator_layout"
+        android:background="@drawable/search_framae_bg"
+        android:padding="5dip" >
+
+        <EditText
+            android:id="@+id/ps_search_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/friend_search_bg"
+            android:hint="@string/program_search_hint"
+            android:lines="1"
+            android:paddingLeft="30dp"
+            android:paddingRight="35dp"
+            android:textColorHint="@color/search_hint_color"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/ps_search_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/search_delete" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ps_search_history"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ps_search_frame"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/playhistory_recommend"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:text="@string/ps_seatch_history_tip"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ps_sh_no_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:text="@string/ps_seatch_history_no_tip"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <GridView
+            android:id="@+id/ps_seatch_history_grid"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:columnWidth="80dp"
+            android:numColumns="2"
+            android:verticalSpacing="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ps_hot_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ps_search_history"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/playhistory_recommend"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:text="@string/ps_hot_key_tip"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <GridView
+            android:id="@+id/ps_hot_key_grid"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:columnWidth="80dp"
+            android:numColumns="2"
+            android:verticalSpacing="10dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ps_search_frame" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/base_large_progressbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" 
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/err_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/err_tip"
+            android:visibility="gone" />
+
+        <com.sumavision.talktv2.activity.MyListView
+            android:id="@+id/listView"
+            style="@style/listViewStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/corners" />
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/navigator_bg" >
+
+        <TextView
+            style="@style/navigator_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/navigator_stardetail" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back_btn" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/err_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/err_tip"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navigator_layout"
+        android:paddingTop="5dp"
+        android:scrollbarThumbVertical="@drawable/base_list_scrollbar_handle"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/star_d_main_rel1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/star_img"
+                    android:layout_width="120dp"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/star_list_defalt" />
+
+                <com.sumavision.talktv2.activity.StepGallery
+                    android:id="@+id/sd_pic_gallery_small"
+                    android:layout_width="fill_parent"
+                    android:layout_height="90dp"
+                    android:layout_below="@+id/star_img"
+                    android:fadingEdgeLength="5dp"
+                    android:spacing="3dp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/star_img"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/star_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chinesename"
+                        android:textColor="#7c7c7c"
+                        android:textSize="14dp" />
+
+                    <!-- 英文姓名 -->
+
+                    <TextView
+                        android:id="@+id/star_name_eng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chinesename"
+                        android:textColor="#7c7c7c"
+                        android:textSize="14dp" />
+
+                    <!-- 星座 -->
+
+                    <TextView
+                        android:id="@+id/star_startype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chinesename"
+                        android:textColor="#7c7c7c"
+                        android:textSize="14dp" />
+
+                    <!-- 爱好 -->
+
+                    <TextView
+                        android:id="@+id/star_hobby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chinesename"
+                        android:textColor="#7c7c7c"
+                        android:lineSpacingExtra="3dp"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            
+            <ImageView
+                android:contentDescription="@string/app_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/rcmd_list_diviver" />
+            <!-- 简介 -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:text="@string/star_intro"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/star_intro"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="5dp"
+                android:maxLines="4"
+                android:padding="10dp"
+                android:text="@string/star_intro_no_intro"
+                android:textColor="#c1000000"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:contentDescription="@string/app_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/rcmd_list_diviver" />
+            
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:text="@string/star_intro_p"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+            <!-- 明星相关节目 -->
+
+            <ListView
+                android:id="@+id/star_programs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:divider="@color/transparent"
+                android:dividerHeight="0dp" />
+        </LinearLayout>
+    </ScrollView>
+
+      <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/corners" /> 
+</RelativeLayout>

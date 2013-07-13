@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/star_p_list_pic"
+        android:layout_width="80dp"
+        android:layout_height="66dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rcmd_list_item_pic_default" />
+
+    <TextView
+        android:id="@+id/star_p_list_name"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/star_p_list_pic"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <!-- android:textColor="#383838" -->
+
+    <TextView
+        android:id="@+id/star_p_list_update"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/star_p_list_name"
+        android:layout_toRightOf="@+id/star_p_list_pic"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#7c7c7c"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/rcmd_special_arrow" />
+
+</RelativeLayout>

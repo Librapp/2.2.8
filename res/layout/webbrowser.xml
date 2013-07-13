@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/webbrowser_all"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#d6d6d6" >
+
+    <RelativeLayout
+        android:id="@+id/navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/navigator_bg" >
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back_btn" />
+        <!-- 进度显示 -->
+
+        <ProgressBar
+            android:id="@+id/wbb_title_pb"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/wbb_title_name"
+            style="@style/navigator_text_style"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dip"
+            android:layout_marginRight="3dip"
+            android:layout_toLeftOf="@id/wbb_title_pb"
+            android:layout_toRightOf="@id/back"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/navigator_myfans" />
+    </RelativeLayout>
+    <!-- 网页 -->
+
+    <WebView
+        android:id="@+id/wbb"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/navigator_layout"
+        android:fitsSystemWindows="true" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/corners" />
+
+</RelativeLayout>

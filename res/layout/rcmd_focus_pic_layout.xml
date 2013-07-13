@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    >
+
+    <com.sumavision.talktv2.activity.FocusGallery
+        android:id="@+id/pic_view"
+        android:layout_width="fill_parent"
+        android:layout_height="128dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="33dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rcmd_pic_title_layout_bg" >
+
+        <TextView
+            android:id="@+id/pic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="3dp"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/pic_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pic_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

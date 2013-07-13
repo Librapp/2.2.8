@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+    <TextView
+        android:id="@+id/nowplaytvlist_item_name"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:paddingBottom="5dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:paddingTop="5dp"
+        android:textColor="#7c7c7c"
+        android:textSize="16sp" />
+    <ImageButton
+        android:id="@+id/nowplaytvlist_item_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/liveplaybtn" />
+</RelativeLayout>

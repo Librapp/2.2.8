@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="biz_pc_list_offline_processbar">#ffaa0000</color> 
+    
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_trans">#a1000000</color>
+    <!-- 黄色 -->
+    <color name="red">#E72722</color>
+    <color name="green">#7fffd4</color>
+    <drawable name="transparent_background">#00000000</drawable>
+
+    <color name="transparent">#00ffffff</color>
+    <!-- android 2.2 -->
+    <color name="tag_default">#585d5e</color>
+    <color name="listview_normal">#d6d6d6</color>
+    <color name="list_transparent">#00000000</color>
+    <color name="search_hint_color">#aaaaaa</color>
+    <color name="pd_video_default">#b51225</color>
+    <color name="rcmd_tag_color">#2f2f2f</color>
+    <color name="jishu_textColor">#7c7c7c</color>
+    <color name="list_header_textColor">#7c7c7c</color>
+    <color name="player_title_color">#ffffff</color>
+    <!-- 2.2.4 -->
+    <color name="base_color_balck">#383838</color>
+    <color name="base_color_gray">#7c7c7c</color>
+	<!-- 2.2.6 -->
+	<color name="channel_add">#c24d37</color>
+	<color name="channel_delete">#888786</color>
+	<color name="behind_color">#2b2c30</color>
+	<!-- 2.2.8 -->
+	<color name="menu_title_color">#999999</color>
+	<color name="menu_item_color">#cccccc</color>
+	<color name="menu_login_layout">#cccccc</color>
+	<color name="menu_search_txt_color">#bbbbbb</color>
+	<color name="errtextcolor">#7c7c7c</color>
+</resources>

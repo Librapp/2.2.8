@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigator_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp" >
+    <TextView
+        android:id="@+id/title"
+        style="@style/navigator_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dip"
+        android:text="@string/menu_recommend"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/btn"
+        style="@style/navigator_btn_style"
+        android:layout_width="wrap_content"
+        android:layout_height="30dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/navigator_btn_bg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/navigator_btn_playhistory"
+        android:textSize="13sp" />
+
+</RelativeLayout>

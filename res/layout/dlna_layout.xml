@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dlna_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true" >
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="316dip"
+        android:layout_height="140dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dlna_search_layout_bg"
+        android:orientation="vertical"
+        android:padding="15dip" >
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_marginBottom="15dip"
+            android:background="@drawable/dlna_search_btn"
+            android:text="@string/search_txt"
+            android:textColor="#323232"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/dlna_cancel_txt_btn"
+            android:text="@string/cancel_txt"
+            android:textColor="#6e6e6e"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searching_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dlna_searching_layout_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/searching_hint" />
+
+        <ProgressBar
+            style="@style/base_large_progressbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_result_layout"
+        android:layout_width="316dip"
+        android:layout_height="140dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dlna_search_layout_bg"
+        android:orientation="vertical"
+        android:padding="15dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_marginBottom="15dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center_horizontal"
+            android:text="@string/device_hint"
+            android:textColor="#6e6e6e"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/result_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:cacheColorHint="@color/list_transparent"
+            android:divider="@drawable/rcmd_list_diviver"
+            android:fadingEdge="none"
+            android:scrollbarThumbVertical="@drawable/base_list_scrollbar_handle"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

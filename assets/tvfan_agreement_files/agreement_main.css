@@ -1,0 +1,63 @@
+UL {
+	LIST-STYLE-POSITION: outside; LIST-STYLE-TYPE: none
+}
+LI {
+	LIST-STYLE-POSITION: outside; LIST-STYLE-TYPE: none
+}
+OL {
+	LIST-STYLE-POSITION: outside; LIST-STYLE-TYPE: none
+}
+H3 {
+	BORDER-BOTTOM: #cccccc 1px solid; PADDING-BOTTOM: 5px; MARGIN: 0px 5px 10px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 14px; PADDING-TOP: 10px
+}
+.job_all LI {
+	LINE-HEIGHT: 35px
+}
+LI.job {
+	PADDING-BOTTOM: 5px; LINE-HEIGHT: 18px; BACKGROUND-COLOR: #eaeaea; TEXT-INDENT: 0px; MARGIN: 70px 0px 20px; PADDING-LEFT: 5px; WIDTH: 280px; PADDING-RIGHT: 5px; HEIGHT: 18px; COLOR: #0066ff; FONT-WEIGHT: bold; PADDING-TOP: 5px
+}
+.job_all OL {
+	MARGIN-LEFT: 30px
+}
+.job_all OL LI {
+	LINE-HEIGHT: 26px
+}
+.job_list {
+	MARGIN-LEFT: 20px; LIST-STYLE-IMAGE: url(../images/icon_job.gif)
+}
+.bottom {
+	WIDTH: 100%; BACKGROUND: url(../images/page1_bg.gif) repeat-x 50% bottom; HEIGHT: 26px; CLEAR: both
+}
+.bottom TH {
+	WIDTH: 30px; BACKGROUND: url(../images/page1_left.gif) no-repeat left 50%
+}
+.bottom .end {
+	TEXT-ALIGN: right; PADDING-RIGHT: 20px; BACKGROUND: url(../images/page1_right.gif) no-repeat right 50%
+}
+.top {
+	WIDTH: 100%; BACKGROUND: url(../images/page_bg.gif) repeat-x 50% bottom; HEIGHT: 30px
+}
+.top TH {
+	WIDTH: 7px; BACKGROUND: url(../images/page_left.gif) no-repeat left 50%
+}
+.top .end {
+	BACKGROUND: url(../images/page_right.gif) no-repeat right 50%
+}
+.top H3 {
+	MARGIN-LEFT: 5px; FONT-SIZE: 14px
+}
+.top2 {
+	WIDTH: 100%; BACKGROUND: url(../images/page_bg.gif) repeat-x 50% bottom; HEIGHT: 30px
+}
+.top2 TH {
+	WIDTH: 7px; BACKGROUND: url(../images/page_left2.gif) no-repeat left 50%
+}
+.top2 .end {
+	BACKGROUND: url(../images/page_right2.gif) no-repeat right 50%
+}
+.top2 H3 {
+	MARGIN-LEFT: 5px; FONT-SIZE: 14px
+}
+.linkicon IMG {
+	BORDER-BOTTOM: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; PADDING-BOTTOM: 3px; BACKGROUND-COLOR: #ffffff; MARGIN: 5px 10px; PADDING-LEFT: 3px; WIDTH: 88px; PADDING-RIGHT: 3px; HEIGHT: 31px; BORDER-TOP: #cccccc 1px solid; BORDER-RIGHT: #cccccc 1px solid; PADDING-TOP: 3px
+}

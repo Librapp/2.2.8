@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/my_medal_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/activities_my_text_left"
+            android:textColor="#383838" />
+
+        <TextView
+            android:id="@+id/medal_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/activities_my_medal_count_bg"
+            android:gravity="center"
+            android:textColor="#383838" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/activities_my_text_right"
+            android:textColor="#383838" />
+
+        <TextView
+            android:id="@+id/lingxian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:textColor="#b13221" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_medal_layout"
+        android:layout_marginLeft="15dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/tag_default"
+        android:text="@string/activities_my_tip_text" />
+
+</RelativeLayout>

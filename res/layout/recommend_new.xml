@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/navigator_bg" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/navigator_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:text="@string/navigator_recommand" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/recommend_title_dr" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/playhistory"
+            style="@style/navigator_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/navigator_btn_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/navigator_btn_playhistory"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/search"
+            style="@style/navigator_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:text="@string/navigator_btn_search" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/program_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/navigator_layout" />
+
+    <ViewStub
+        android:id="@+id/type_actionbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_below="@id/navigator_layout"
+         />
+
+    <RelativeLayout
+        android:id="@+id/type_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/tag_layout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/rcmd_tag_text_normal"
+            android:cacheColorHint="@color/list_transparent"
+            android:divider="@drawable/rcmd_tag_list_diviver"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/rcmd_list_tag_selector" />
+    </RelativeLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/corner_top" />
+
+</RelativeLayout>

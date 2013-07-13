@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/pd_navigator"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/play"
+            style="@style/navigator_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/navigator_play_btn"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/navigator_text_style"
+            android:layout_width="160dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/navigator_layout"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <!--
+            <ViewFlipper
+                android:id="@+id/ViewFlipper"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </ViewFlipper>
+            -->
+
+            <com.sumavision.talktv2.components.CustomWebView
+                android:id="@+id/webview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            
+             <ProgressBar
+                    android:id="@+id/WebViewProgress"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginRight="3dip"
+                    android:layout_marginTop="3dip"
+                    android:indeterminate="false"
+                    android:maxHeight="5px"
+                    android:minHeight="5px" 
+                    android:visibility="gone"
+                    >
+                </ProgressBar>
+
+            <!-- <LinearLayout
+                android:id="@+id/BarLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/GoBtn"
+                android:background="@drawable/tb_background_top"
+                android:orientation="vertical"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:weightSum="0.75" >
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageButton
+                        android:id="@+id/ToolsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dip"
+                        android:layout_marginRight="0dip"
+                        android:background="@drawable/buttons"
+                        android:src="@drawable/fav_icn_default" >
+                    </ImageButton>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/UrlText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:layout_marginTop="3dip"
+                        android:layout_weight="0.75"
+                        android:dropDownHeight="wrap_content"
+                        android:dropDownWidth="fill_parent"
+                        android:inputType="textUri" >
+                    </AutoCompleteTextView>
+
+                    <ImageButton
+                        android:id="@+id/GoBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="3dip"
+                        android:background="@drawable/buttons"
+                        android:src="@drawable/ic_btn_go" >
+                    </ImageButton>
+                </LinearLayout>
+            </LinearLayout> 
+
+            <LinearLayout
+                android:id="@+id/findControls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@android:drawable/bottom_bar"
+                android:paddingBottom="1dip"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
+                android:paddingTop="5dip"
+                android:visibility="gone" >
+
+                <ImageButton
+                    android:id="@+id/find_previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_btn_find_prev" />
+
+                <ImageButton
+                    android:id="@+id/find_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_btn_find_next" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dip"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <EditText
+                        android:id="@+id/find_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:hint="@string/SearchDialog.Hint"
+                        android:inputType="text"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/find_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_btn_close_panel" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/BubbleRightView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/bubbleright48"
+                android:visibility="gone" >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/BubbleLeftView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/bubbleleft48"
+                android:visibility="gone" >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/PreviousTabView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/previous_tab"
+                android:visibility="gone" >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/NextTabView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/next_tab"
+                android:visibility="gone" >
+            </ImageView>
+
+            <LinearLayout
+                android:id="@+id/BottomBarLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/tb_background_bottom"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:weightSum="5" >
+
+                <ImageButton
+                    android:id="@+id/PreviousBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginTop="7dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttons_bottom"
+                    android:src="@drawable/ic_btn_next" >
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/RemoveTabBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginTop="7dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttons_bottom"
+                    android:src="@drawable/ic_btn_close_tab" >
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/QuickBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginTop="7dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttons_bottom"
+                    android:src="@drawable/ic_btn_bookmarks" >
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/NewTabBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginTop="7dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttons_bottom"
+                    android:src="@drawable/ic_btn_open_tab" >
+                </ImageButton>
+
+                <ImageButton
+                    android:id="@+id/NextBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_marginRight="3dip"
+                    android:layout_marginTop="7dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttons_bottom"
+                    android:src="@drawable/ic_btn_forward" >
+                </ImageButton>
+            </LinearLayout> -->
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/errLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/navigator_layout"
+        android:clickable="true" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/base_large_progressbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/err_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/err_tip"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/corners" />
+
+</RelativeLayout>

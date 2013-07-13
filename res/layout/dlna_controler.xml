@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:roundProgress="http://schemas.android.com/apk/res/com.sumavision.talktv2"
+    android:id="@+id/all"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eff0f1"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/navigator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="47dp"
+        android:background="@drawable/navigator_bg" >
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <!-- 音量 -->
+        <Button
+            android:id="@+id/pd_m2tv_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/pd_m2tv_sound" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#eff0f1" >
+        <FrameLayout
+            android:id="@+id/controler_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+            <com.sumavision.talktv2.components.CircleProgress
+                android:id="@+id/positionseekbar"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:duplicateParentState="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:longClickable="true"
+                roundProgress:BottomPaint_Width="12"
+                roundProgress:Inside_Interval="20"
+                roundProgress:Paint_Width="12"
+                roundProgress:SubPaint_Width="12"
+                roundProgress:degree="270"
+                roundProgress:direction="up"
+                roundProgress:fill="false"
+                roundProgress:max="270" />
+            <FrameLayout
+                android:layout_width="270dp"
+                android:layout_height="270dp"
+                android:layout_gravity="center"
+                android:background="@drawable/dlna_controler_bg"
+                android:gravity="top|center_horizontal" >
+                <com.sumavision.talktv2.components.CircleProgressDown
+                    android:id="@+id/volumeseekbar"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:duplicateParentState="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:longClickable="true"
+                    android:visibility="visible"
+                    roundProgress:BottomPaint_Width="10"
+                    roundProgress:Inside_Interval="20"
+                    roundProgress:Paint_Width="10"
+                    roundProgress:SubPaint_Width="10"
+                    roundProgress:degree="80"
+                    roundProgress:direction="down"
+                    roundProgress:fill="false"
+                    roundProgress:max="100" />
+                <ImageButton
+                    android:id="@+id/play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/dlna_play" />
+                <ImageButton
+                    android:id="@+id/forward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="30dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/dlna_forward" />
+                <ImageButton
+                    android:id="@+id/stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/dlna_stop" />
+                <ImageButton
+                    android:id="@+id/backward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/dlna_backward" />
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/dlna_time_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/controler_layout"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/hu"
+            android:gravity="center"
+            android:paddingBottom="35dp" >
+            <TextView
+                android:id="@+id/currenttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="@string/time"
+                android:textColor="#2493d2"
+                android:textSize="18sp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/dlna_vertical_line" />
+            <TextView
+                android:id="@+id/endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/time"
+                android:textColor="#cbcbcb"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

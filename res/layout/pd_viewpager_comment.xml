@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+           style="@style/base_small_progressbar_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/err_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/err_tip"
+            android:visibility="gone" />
+
+        <com.sumavision.talktv2.activity.ProgramCommentListView
+            android:id="@+id/listView"
+            style="@style/listViewStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="45dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pd_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/pd_comment_bg"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/sendcomment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/pd_send_comment_2" />
+
+        <ImageButton
+            android:id="@+id/screenshot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/pd_screen_shot" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/sendcomment1"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/pd_send_comment_2" />
+
+</RelativeLayout>
